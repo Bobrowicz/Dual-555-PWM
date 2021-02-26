@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name TLC555)(type Legacy)(uri ${KIPRJMOD}/TLC555.lib)(options "")(descr ""))
+)
