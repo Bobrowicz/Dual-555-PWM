@@ -83,17 +83,6 @@ Wire Wire Line
 	4500 3300 4600 3300
 Wire Wire Line
 	4600 3300 4600 3500
-$Comp
-L power:VCC #PWR04
-U 1 1 6035C72D
-P 4600 1750
-F 0 "#PWR04" H 4600 1600 50  0001 C CNN
-F 1 "VCC" H 4617 1923 50  0000 C CNN
-F 2 "" H 4600 1750 50  0001 C CNN
-F 3 "" H 4600 1750 50  0001 C CNN
-	1    4600 1750
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4500 3000 4600 3000
 Wire Wire Line
@@ -118,8 +107,6 @@ F 3 "" H 4000 3900 50  0001 C CNN
 	1    4000 3900
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4000 3900 4000 3500
 $Comp
 L power:GND #PWR05
 U 1 1 6035F501
@@ -324,13 +311,7 @@ Connection ~ 5500 2650
 Wire Wire Line
 	5500 2300 5500 1850
 Wire Wire Line
-	4000 1850 4500 1850
-Wire Wire Line
-	5500 1850 6400 1850
-Wire Wire Line
 	6400 1850 6400 2650
-Wire Wire Line
-	4600 1750 4600 1850
 $Comp
 L Device:C C2
 U 1 1 603D1127
@@ -345,8 +326,6 @@ $EndComp
 Wire Wire Line
 	4500 1950 4500 1850
 Connection ~ 4500 1850
-Wire Wire Line
-	4500 1850 4600 1850
 $Comp
 L power:GND #PWR03
 U 1 1 603D2DB6
@@ -374,7 +353,7 @@ F 3 "~" H 7700 1950 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	7500 1850 6400 1850
+	7500 1850 7250 1850
 Connection ~ 6400 1850
 $Comp
 L power:GND #PWR010
@@ -397,9 +376,6 @@ Wire Wire Line
 	7200 2150 7500 2150
 Wire Wire Line
 	5000 2050 5000 3200
-Wire Wire Line
-	4600 1850 5500 1850
-Connection ~ 4600 1850
 Connection ~ 5500 1850
 Wire Wire Line
 	5000 2050 7500 2050
@@ -414,4 +390,44 @@ Wire Wire Line
 	3050 3350 3050 3500
 Wire Wire Line
 	3050 2750 3050 2900
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 604984CF
+P 7250 1800
+F 0 "#FLG0101" H 7250 1875 50  0001 C CNN
+F 1 "PWR_FLAG" H 7250 1973 50  0000 C CNN
+F 2 "" H 7250 1800 50  0001 C CNN
+F 3 "~" H 7250 1800 50  0001 C CNN
+	1    7250 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 1850 4500 1850
+Wire Wire Line
+	4500 1850 5500 1850
+Wire Wire Line
+	5500 1850 6400 1850
+Wire Wire Line
+	7250 1800 7250 1850
+Connection ~ 7250 1850
+Wire Wire Line
+	7250 1850 6400 1850
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 604A02A6
+P 3950 3850
+F 0 "#FLG0102" H 3950 3925 50  0001 C CNN
+F 1 "PWR_FLAG" V 3950 3977 50  0000 L CNN
+F 2 "" H 3950 3850 50  0001 C CNN
+F 3 "~" H 3950 3850 50  0001 C CNN
+	1    3950 3850
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3950 3850 4000 3850
+Wire Wire Line
+	4000 3500 4000 3850
+Connection ~ 4000 3850
+Wire Wire Line
+	4000 3850 4000 3900
 $EndSCHEMATC
